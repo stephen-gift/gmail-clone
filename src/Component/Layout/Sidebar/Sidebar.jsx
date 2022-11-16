@@ -1,20 +1,57 @@
-import { Button } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import React from "react";
 import "./Sidebar.css";
-import AddIcon from "@mui/icons-material/Add";
 import SidebarOptions from "./SidebarOptions/SidebarOptions";
-import InboxIcon from "@mui/icons-material/Inbox";
+import {
+  AccessTime,
+  Add,
+  Duo,
+  ExpandMore,
+  Inbox,
+  LabelImportant,
+  NearMe,
+  Note,
+  Person,
+  Phone,
+  Star,
+} from "@mui/icons-material";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <Button
-        startIcon={<AddIcon fontSize="large" />}
-        className="sidebarCompose"
-      >
+      <Button startIcon={<Add fontSize="large" />} className="sidebarCompose">
         COMPOSE
       </Button>
-      <SidebarOptions Icon={<InboxIcon />} title={`inbox`} number={54} />
+      <SidebarOptions
+        Icon={<Inbox />}
+        title={`inbox`}
+        number={54}
+        selected={true}
+      />
+      <SidebarOptions Icon={<Star />} title={`starred`} number={54} />
+      <SidebarOptions Icon={<AccessTime />} title={`snoozed`} number={54} />
+      <SidebarOptions
+        Icon={<LabelImportant />}
+        title={`important`}
+        number={54}
+      />
+      <SidebarOptions Icon={<NearMe />} title={`sent`} number={54} />
+      <SidebarOptions Icon={<Note />} title={`draft`} number={54} />
+      <SidebarOptions Icon={<ExpandMore />} title={`more`} number={54} />
+
+      <div className="sidebarFooter">
+        <div className="sidebarFooterIcons">
+          <IconButton>
+            <Person />
+          </IconButton>
+          <IconButton>
+            <Duo />
+          </IconButton>
+          <IconButton>
+            <Phone />
+          </IconButton>
+        </div>
+      </div>
     </div>
   );
 };

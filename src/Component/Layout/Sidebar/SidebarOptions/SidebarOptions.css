@@ -9,7 +9,10 @@
 }
 .sidebarOptions:hover,
 .sidebarOptions:hover p,
-.sidebarOptions:hover h3 {
+.sidebarOptions:hover h3,
+.sidebarOptionsActive,
+.sidebarOptionsActive p,
+.sidebarOptionsActive h3 {
   background-color: #fcecec;
   color: #c04b37;
   font-weight: 800 !important;
@@ -30,4 +33,7 @@
 }
 .sidebarOptions:hover p {
   display: inline;
+}
+.sidebarOptionsActive p{
+    display: inline;
 }
