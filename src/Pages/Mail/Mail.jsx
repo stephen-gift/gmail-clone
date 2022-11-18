@@ -66,6 +66,19 @@ const Mail = () => {
           </IconButton>
         </div>
       </div>
+
+      <div className="mailBody">
+        <div className="mailBodyHeader">
+          <h2>Subject</h2>
+          <LabelImportant className="mailImportant" />
+          <p>Title</p>
+          <p className="mailTime">10pm</p>
+        </div>
+
+        <div className="mailMessage">
+          <p>This a Message</p>
+        </div>
+      </div>
     </div>
   );
 };
