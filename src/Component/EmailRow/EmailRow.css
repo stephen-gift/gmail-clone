@@ -27,3 +27,16 @@
   padding-left: 5px;
   padding-right: 5px;
 }
+.emailRowTitle {
+  font-size: 13px;
+  flex: 0.3;
+}
+.emailRowTime {
+  padding: 15px;
+  font-size: 9px;
+  font-weight: bold;
+}
+.emailRowDescription {
+    font-weight: 400;
+    color: gray;
+}

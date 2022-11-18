@@ -1,6 +1,6 @@
 .emailList {
   flex: 1;
-  overflow: scroll;
+  /* overflow-x: scroll; */
 }
 .emailListSettings {
   position: sticky;

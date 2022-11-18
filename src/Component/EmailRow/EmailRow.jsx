@@ -4,11 +4,17 @@ import {
 } from "@mui/icons-material";
 import { Checkbox, IconButton } from "@mui/material";
 import React from "react";
-import './EmailRow.css'
+import { useNavigate } from "react-router-dom";
+import "./EmailRow.css";
 
 const EmailRow = ({ id, title, subject, description, time }) => {
+  const Navigate = useNavigate();
+  const rowClickHandler = () => {
+    Navigate("/mail");
+  };
+
   return (
-    <div className="emailRow">
+    <div onClick={rowClickHandler} className="emailRow">
       <div className="emailRowOptions">
         <Checkbox />
         <IconButton>
@@ -22,10 +28,10 @@ const EmailRow = ({ id, title, subject, description, time }) => {
       <div className="emailRowMessage">
         <h4>
           {subject}
-          <span className="emailRowDescription">{description}</span>
+          {""} <span className="emailRowDescription">-{description}</span>
         </h4>
       </div>
-      <div className="emailRowTime">{time}</div>
+      <p className="emailRowTime">{time}</p>
     </div>
   );
 };
